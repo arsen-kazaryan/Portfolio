@@ -1,0 +1,17 @@
+.projects-section {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #07112c;
+}
+
+
+.projects-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(circle at center, #0e131e, #233041, #07112c);
+  animation: pulseGlowPage2 5s ease infinite alternate-reverse;
+}

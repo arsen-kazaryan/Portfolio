@@ -1,123 +1,124 @@
 .hero-section {
+  position: relative;
+  isolation: isolate;
   display: flex;
   justify-content: center;
-  text-align: center;
   align-items: center;
   flex-direction: column;
-  outline: 1px solid red;
-  width: 100%;
-  padding: 10px 5px;
-  height: 100vh;
   gap: 10px;
-
-  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 10px 5px;
   overflow: hidden;
+  text-align: center;
   background-color: #030712;
 }
 
 .hero-section::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;/*Фон сайта которому задан z-index: 1---- поэтому все элементы должны быть z-index: 2*/
-
-  background: radial-gradient(circle at center, #111827, #1f2937, #030712) ;
-  z-index: 1;
-
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(circle at center, #111827, #1f2937, #030712);
   animation: pulseGlow 4s ease infinite alternate-reverse;
 }
 
-
-.hero-section__desc, h1 {
+.hero-section__desc,
+.hero-section__social-container,
+.hero-section__about {
   position: relative;
-  z-index: 2;
 }
 
 .hero-section__desc {
-  font-size: 16px;
   color: rgb(255, 222, 112);
+  font-size: 16px;
   cursor: default;
 }
 
 h1 {
-  font-size: 60px;
+  position: relative;
   color: #ffffff;
-  transition: 0.2s ease;
+  font-size: 60px;
   cursor: default;
+  transition: color 0.2s ease;
+}
 
-  span {
-    color: rgb(255, 222, 112);
-    transition: 0.2s ease;
-  }
+.hero-section__name {
+  color: rgb(255, 222, 112);
+  transition: color 0.2s ease;
+}
 
-  &:hover {
-    color: rgb(255, 222, 112);
+ h1:hover {
+  color: rgb(255, 222, 112);
+}
 
-    span {
-      color: white;
-    }
-  }
+h1:hover 
+.hero-section__name {
+  color: white;
 }
 
 .hero-section__social-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width: 100%;
+  max-width: 250px;
+  margin-top: 20px;
+  padding: 10px 15px;
   border: 1px solid rgba(96, 96, 100, 0.292);
   border-radius: 15px;
-  margin-top: 20px;
-  max-width: 250px;
-   background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(10px);
-  width: 100%;
-  padding: 10px 15px;
-  z-index: 2;
+}
 
-  & a {
-    cursor: pointer;
-    display: flex;
-    border: 1px solid rgb(42, 42, 42);
-    background-color: #56565660;
-    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.236);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    transition: 0.2s ease;
+.hero-section__social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgb(42, 42, 42);
+  border-radius: 50%;
+  background-color: #56565660;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.236);
+  cursor: pointer;
+  transition: 0.2s ease;
 
-    &:hover {
+  img {
+    width: 22px;
+    height: 22px;
+  }
+
+  &:hover {
+    border-color: #f7d071;
     background-color: #f7d071;
     color: #111;
-    border-color: #f7d071;
-    transform: translateY(-2px) scale(1.05);
     box-shadow: 0 8px 25px rgba(247, 208, 113, 0.4);
-    }
+    transform: translateY(-2px) scale(1.05);
   }
 }
 
 .hero-section__about {
   padding: 10px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 30px;
   background: rgba(255, 255, 255, 0.03);
   color: #fff;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.5px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   cursor: pointer;
-  transition: ease 0.4s ;
+  transition: 0.4s ease;
 
   &:hover {
+    border-color: #f7d071;
     background-color: #f7d071;
     color: #111;
-    border-color: #f7d071;
-    transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(247, 208, 113, 0.4);
+    transform: translateY(-2px);
   }
 }
-
 
 @keyframes pulseGlow {
   from {

@@ -1,0 +1,31 @@
+.skills-section {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #07112c;
+}
+
+.skills-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(circle at center, #0b0f19, #1f2937, #000102);
+  animation: pulseGlowPage2 2s ease infinite alternate-reverse;
+}
+
+.skills-section__title {
+  position: relative;
+  color: #ffffff;
+}
+
+@keyframes pulseGlowPage2 {
+  from {
+    transform: scale(1.03);
+  }
+
+  to {
+    transform: scale(1.5);
+  }
+}

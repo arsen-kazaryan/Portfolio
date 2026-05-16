@@ -1,0 +1,16 @@
+.mail-section {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #07112c;
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: radial-gradient(circle at center, #000000b7, #19293f, #030b22);
+      animation: pulseGlowPage2 3s ease infinite alternate-reverse;
+    }
+}
+
