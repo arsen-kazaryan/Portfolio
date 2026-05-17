@@ -1,11 +1,21 @@
 import { Link } from 'react-router-dom'
 import './Home.css'
+import Typewriter from 'typewriter-effect'; //Библиотека для эффекта печати
 
 const Home = () => {
   return (
     <div className="hero-section">
       <p className="hero-section__desc">HELLO I'M</p>
       <h1>Kazaryan <span className="hero-section__name">Arsen</span></h1>
+      <Typewriter  
+        options={{
+          strings: ['JavaScript Developer','Git','React '],
+          autoStart: true,
+          loop: true,
+          delay:100,             //скорость печати
+          deleteSpeed:50,       //скорость удаления 
+        }}
+      />
       <div className="hero-section__social-container">
         <a href='https://github.com/arsen-kazaryan' className="hero-section__social-link" target='_blank' rel='noreferrer'><img src="/icon/github-white.svg" alt="GitHub" /></a>
         <a href='https://www.linkedin.com/in/arsen-kazaryan' className="hero-section__social-link" target='_blank' rel='noreferrer'><img src="/icon/linkedin-white.svg" alt="LinkedIn" /></a>

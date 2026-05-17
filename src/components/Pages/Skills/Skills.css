@@ -2,6 +2,7 @@
   position: relative;
   isolation: isolate;
   min-height: 100vh;
+  padding: 20px 28px 70px 110px;
   overflow: hidden;
   background-color: #07112c;
 }
@@ -9,15 +10,86 @@
 .skills-section::before {
   content: "";
   position: absolute;
-  inset: 0;
+  inset: -20%;
   z-index: -1;
   background: radial-gradient(circle at center, #0b0f19, #1f2937, #000102);
   animation: pulseGlowPage2 2s ease infinite alternate-reverse;
+  transform-origin: center;
+}
+
+.skills-section__content {
+  width: 100%;
+}
+
+.skills-section__label {
+  margin-bottom: 10px;
+  color: #f7d071;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .skills-section__title {
-  position: relative;
+  margin-bottom: 14px;
   color: #ffffff;
+  font-size: 46px;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.skills-section__desc {
+  max-width: 560px;
+  margin: 0 auto 34px;
+  color: #d1d5db;
+  font-size: 17px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.skills-section__grid {
+  display: grid;
+  margin-top: 30px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.skills-card {
+  min-height: 120px;
+  padding: 15px;
+  border: 1px solid rgba(96, 96, 100, 0.292);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  transition: 0.2s ease;
+
+  &:hover {
+    border-color: rgba(247, 208, 113, 0.5);
+    box-shadow: 0 8px 25px rgba(247, 208, 113, 0.18);
+  }
+
+  h3 {
+    margin-bottom: 10px;
+    color: #f7d071;
+    font-size: 18px;
+  }
+
+  p {
+    color: #d1d5db;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+@keyframes movedBlocks {
+  from {
+    transform: translateY(4px);
+  }
+
+  to {
+    transform: translateY(-4px);
+  }
 }
 
 @keyframes pulseGlowPage2 {
@@ -27,5 +99,25 @@
 
   to {
     transform: scale(1.5);
+  }
+}
+
+@media (max-width: 1000px) {
+  .skills-section__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .skills-section {
+    padding: 44px 18px 110px;
+  }
+
+  .skills-section__title {
+    font-size: 36px;
+  }
+
+  .skills-section__grid {
+    grid-template-columns: 1fr;
   }
 }
