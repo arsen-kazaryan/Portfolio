@@ -4,7 +4,7 @@ import './About.css'
 const About = () => {
 
   const [black, setblack] = useState(false)
-  const handleClick = (e) => {
+  const handleClick = () => {
     setblack((e) => !e)        //Experemental!
   }
 

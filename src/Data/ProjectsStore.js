@@ -1,0 +1,58 @@
+  export const projects = [
+    {
+      id: 1,
+      title: 'Job Tracker',
+      text: 'React app for tracking job applications with a simple, focused interface.',
+      stack: 'React / CSS',
+      href: 'https://job-tracker-three-gilt.vercel.app/',
+    },
+    {
+      id: 2,
+      title: 'Nique',
+      text: 'Restaurant landing page with menu sections, classes and table booking.',
+      stack: 'HTML / CSS',
+      href: 'https://arsen-kazaryan.github.io/Nique/',
+    },
+    {
+      id: 3,
+      title: 'INTERACT',
+      text: 'Business landing page with features, services, gallery, team and contact blocks.',
+      stack: 'HTML / CSS',
+      href: 'https://arsen-kazaryan.github.io/INTERACT/',
+    },
+    {
+      id: 4,
+      title: 'TaskFlow',
+      text: 'Task management app for organizing workflow with clean React state logic.',
+      stack: 'React / Zustand',
+      href: 'https://task-flow-v2-one.vercel.app/',
+    },
+    {
+      id: 5,
+      title: 'KONSTRUKT',
+      text: 'Construction company landing page with story, services and capability sections.',
+      stack: 'HTML / CSS',
+      href: 'https://arsen-kazaryan.github.io/KONSTRUKT/',
+    },
+    {
+      id: 6,
+      title: 'StarBucks',
+      text: 'Coffee shop landing page with product cards, cafe benefits and promo sections.',
+      stack: 'HTML / SCSS',
+      href: 'https://arsen-kazaryan.github.io/coffee-landing-page/',
+    },
+    {
+      id: 7,
+      title: 'BurgerWeb',
+      text: 'Fast-food landing page with product offers, pricing cards and call-to-action sections.',
+      stack: 'HTML / SCSS',
+      href: 'https://arsen-kazaryan.github.io/Burger-Web/',
+    },
+    {
+      id: 8,
+      title: 'TheBox',
+      text: 'Construction services landing page with reputation, projects, stats and contact sections.',
+      stack: 'HTML / SCSS',
+      href: 'https://arsen-kazaryan.github.io/TheBox/',
+    },
+  ]

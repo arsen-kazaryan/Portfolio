@@ -63,7 +63,7 @@
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(10px);
   transition: 0.2s ease;
-
+  cursor: default;
   &:hover {
     border-color: rgba(247, 208, 113, 0.5);
     box-shadow: 0 8px 25px rgba(247, 208, 113, 0.18);
