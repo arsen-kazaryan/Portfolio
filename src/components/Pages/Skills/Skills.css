@@ -62,7 +62,7 @@
   border-radius: 15px;
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(10px);
-  transition: 0.2s ease;
+  transition:  0.2s ease;
   cursor: default;
   &:hover {
     border-color: rgba(247, 208, 113, 0.5);
@@ -101,6 +101,7 @@
     transform: scale(1.5);
   }
 }
+
 
 @media (max-width: 1000px) {
   .skills-section__grid {

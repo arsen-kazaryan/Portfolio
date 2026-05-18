@@ -1,0 +1,127 @@
+.fireflies {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.fireball {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #f7d071;
+  box-shadow: 0 0 12px rgba(247, 208, 113, 0.9), 0 0 24px rgba(247, 208, 113, 0.35);
+  opacity: 0.35;
+  animation: fireballMove 7s  infinite alternate-reverse, fireballBlink 2.5s ease-in-out infinite;
+  /* используется две анимации для один для создания мерыания другой для создания джвижения */
+}
+
+.fireball--1 {
+  top: 18%;
+  left: 18%;
+  animation-delay: 0s;
+}
+
+.fireball--2 {
+  top: 28%;
+  left: 76%;
+  animation-delay: 0.4s;
+}
+
+.fireball--3 {
+  top: 64%;
+  left: 20%;
+  animation-delay: 0.8s;
+}
+
+.fireball--4 {
+  top: 72%;
+  left: 82%;
+  animation-delay: 1.2s;
+}
+
+.fireball--5 {
+  top: 42%;
+  left: 12%;
+  animation-delay: 1.6s;
+}
+
+.fireball--6 {
+  top: 16%;
+  left: 58%;
+  animation-delay: 2s;
+}
+
+.fireball--7 {
+  top: 82%;
+  left: 48%;
+  animation-delay: 2.4s;
+}
+
+.fireball--8 {
+  top: 48%;
+  left: 88%;
+  animation-delay: 2.8s;
+}
+
+.fireball--9 {
+  top: 12%;
+  left: 38%;
+  animation-delay: 3.2s;
+}
+
+.fireball--10 {
+  top: 54%;
+  left: 34%;
+  animation-delay: 3.6s;
+}
+.fireball--11 {
+  top: 48%;
+  left: 58%;
+  animation-delay: 2.8s;
+}
+
+.fireball--12 {
+  top: 20%;
+  left: 35%;
+  animation-delay: 3.2s;
+}
+
+.fireball--13 {
+  top: 44%;
+  left: 64%;
+  animation-delay: 3.6s;
+}
+.fireball--14 {
+  top: 68%;
+  left: 48%;
+  animation-delay: 2.8s;
+}
+
+.fireball--15 {
+  top: 40%;
+  left: 38%;
+  animation-delay: 3.2s;
+}
+
+@keyframes fireballMove {
+  from {
+    transform: translate(0, 0) scale(0.8);
+  }
+
+  to {
+    transform: translate(22px, -28px) scale(1.2);
+  }
+}
+
+@keyframes fireballBlink {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+
+  50% {
+    opacity: 0.9;
+  }
+}

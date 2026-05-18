@@ -1,16 +1,125 @@
 .mail-section {
   position: relative;
   isolation: isolate;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+  padding: 50px 28px 70px 110px;
   overflow: hidden;
   background-color: #07112c;
-    &::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: -1;
-      background: radial-gradient(circle at center, #000000b7, #19293f, #030b22);
-      animation: pulseGlowPage2 3s ease infinite alternate-reverse;
-    }
+
+  h2 {
+    margin-bottom: 16px;
+    color: #ffffff;
+    font-size: 46px;
+    line-height: 1.1;
+  }
 }
 
+.mail-section::before {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  z-index: -1;
+  background: radial-gradient(circle at center, #000000b7, #19293f, #030b22);
+  animation: pulseGlowPage2 3s ease infinite alternate-reverse;
+  transform-origin: center;
+}
+
+.mail-section__card {
+  max-width: 620px;
+  padding: 32px;
+  border: 1px solid rgba(96, 96, 100, 0.292);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.mail-section__label {
+  margin-bottom: 10px;
+  color: #f7d071;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.mail-section__desc {
+  margin-bottom: 26px;
+  color: #d1d5db;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.mail-section__links {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 28px;
+
+  a, span {
+    color: #d1d5db;
+    font-size: 15px;
+  }
+
+  a {
+    transition: 0.2s ease;
+
+    &:hover {
+      color: #f7d071;
+
+    }
+  }
+}
+
+.mail-section__actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+
+  a {
+    padding: 10px 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.03);
+    color: #ffffff;
+    font-size: 14px;
+    transition: 0.3s ease;
+
+    &:hover {
+      border-color: #f7d071;
+      background-color: #f7d071;
+      color: #111827;
+      box-shadow: 0 8px 25px rgba(247, 208, 113, 0.35);
+      transform: translateY(-2px);
+    }
+  }
+}
+
+
+
+@keyframes pulseGlowPage2 {
+  from {
+    transform: scale(1.03);
+  }
+
+  to {
+    transform: scale(1.4);
+  }
+}
+
+@media (max-width: 700px) {
+
+  .mail-section{
+    padding: 30px;
+  }
+  .mail-section__card {
+    padding: 24px;
+  }
+
+  .mail-section h2 {
+    font-size: 36px;
+  }
+}

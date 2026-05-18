@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './About.css'
+import Fireflies from '../../Fireflies/Fireflies'
 
 const About = () => {
 
@@ -10,6 +11,7 @@ const About = () => {
 
   return (
     <section className="about-section">
+      <Fireflies/>
       <div className="about-section__content">
         <p className="about-section__label">About me</p>
         <h2><span>Kazaryan</span> Arsen</h2>

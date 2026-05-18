@@ -23,6 +23,16 @@
   animation: pulseGlow 4s ease infinite alternate-reverse;
 }
 
+.hero-section__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .hero-section__desc,
 .hero-section__social-container,
 .hero-section__about {

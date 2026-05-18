@@ -65,6 +65,8 @@
   border-radius: 15px;
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(10px);
+  opacity: 0;
+  animation: projectCardShow 0.55s ease forwards;
   transition: 0.2s ease;
 
   h3 {
@@ -158,6 +160,18 @@
 
   to {
     transform: scale(1.4);
+  }
+}
+
+@keyframes projectCardShow {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
