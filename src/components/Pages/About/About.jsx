@@ -17,7 +17,7 @@ const About = () => {
         <h2><span>Kazaryan</span> Arsen</h2>
         <div className='about-section__wrapper'>
           <div className="about-section__img-wrapper">
-            <img src={black ? '/icon/profile.png' : '/icon/Profile-black.png'} alt="profile-img" className='about-section__img' />
+            <img src={black ? '/icon/profile.png' : '/icon/Profile-black.png'} alt="profile-img" className='about-section__img' loading='lazy'/>
           </div>
 
           <div className='about-section__wrapper-desc'>
